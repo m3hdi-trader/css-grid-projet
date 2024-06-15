@@ -107,3 +107,100 @@ p {
         line-height: 1;
     }
 }
+
+/*
+=============== 
+Navbar
+===============
+*/
+
+.nav-links{
+    display: none;
+}
+
+
+
+.nav{
+    background: var(--clr-primary-5);
+    height: 4.5rem;
+    padding: 1rem;
+    transition: var(--transition);
+}
+
+.nav-center{
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+}
+
+
+.nav-header{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.nav-header h3{
+    font-size: 1.75rem;
+}
+
+.nav-btn{
+    justify-self: end;
+    background: transparent;
+    border-color: transparent;
+    color: var(--clr-primary-2);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media screen  and (min-width:768px){
+    .nav-btn{
+        display: none;
+    }
+
+    .nav-links{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        column-gap: 2rem;
+        justify-items: center;
+        justify-self: end;
+    }
+
+    .nav-links a{
+        color: var(--clr-grey-1);
+        transition: var(--transition);
+    }
+
+    .nav-links a:hover{
+        color: var(--clr-primary-4);
+    }
+
+    .nav-center{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+    
+}
+
+.navbar-fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+}
+
+
+/*
+=============== 
+Hero
+===============
+*/
+
+.hero{
+    height: 130vh;
+    background: red;
+}

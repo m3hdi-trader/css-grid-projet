@@ -196,11 +196,76 @@ Navbar
 
 /*
 =============== 
-Hero
+Sidebar
 ===============
 */
 
-.hero{
-    height: 130vh;
-    background: red;
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr-grey-3);
+    z-index: 4;
+    display: grid;
+    place-content: center;
+    transform: translateX(100%);
+    transition: var(--transition);
+}
+
+.show-sidebar{
+    transform: translateX(0);
+}
+
+
+.close-btn{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 3rem;
+    background: transparent;
+    border: transparent;
+    color: #bb2525;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-btn:hover{
+    color: #e66b6b;
+}
+
+.sidebar-links{
+    text-align: center;
+}
+
+.sidebar-links a{
+    font-size: 1.5rem;
+    color: var(--clr-grey-2);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.sidebar-links a:hover{
+    color: var(--clr-primary-4);
+}
+
+.sidebar-icons{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-items: center;
+    column-gap: 2rem;
+    margin-top: 3rem;
+}
+
+.sidebar-icons a{
+    font-size: 1.5rem;
+    color: var(--clr-grey-1);
+    transition: var(--transition);
+   
+}
+
+.sidebar-icons a:hover{
+    color: var(--clr-primary-4);
 }

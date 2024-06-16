@@ -820,5 +820,90 @@ Timeline
 
 }
 
+/*
+=============== 
+Articles
+===============
+*/
+
+.articles{
+    background: var(--clr-grey-3);
+}
+
+.card{
+    height: 27rem;
+    perspective: 1500px;
+    position: relative;
+}
+
+.card-side{
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 1.5s linear;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+.front-card{
+    background: var(--clr-white);
+}
+
+.back-card{
+    background: var(--clr-primary-5);
+    transform: rotateY(180deg);
+    display: grid;
+    place-items: center;
+
+
+
+}
+
+.card:hover .front-card{
+    transform: rotateY(-180deg)
+}
+
+
+.card:hover .back-card{
+    transform: rotateY(0)
+}
+
+.front-card img{
+    height: 13rem;
+    object-fit: cover;
+    border-top-left-radius:var(--radius);
+    border-bottom-left-radius:var(--radius);
+}
+
+.card-footer img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.card-info{
+    padding: 1rem 1.5rem ;
+}
+
+.card-footer{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.card-footer p{
+    margin-bottom: 0;
+    justify-self: end;
+    color: var(--clr-primary-2);
+    font-size: 0.85rem;
+}
+
+.articles-center{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(330px,1fr));
+    gap: 3rem 1rem;
+}
 
 

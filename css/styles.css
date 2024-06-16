@@ -907,3 +907,37 @@ Articles
 }
 
 
+/*
+=============== 
+Footer
+===============
+*/
+.footer{
+    padding-bottom: 2rem;
+    background: #222;
+    display: grid;
+    place-items: center;
+}
+
+.footer .social-icons{
+    margin-bottom: 2rem;
+
+}
+
+.footer .social-icons a{
+    color: var(--clr-primary-2);
+    transition: var(--transition);
+}
+
+.footer .social-icons a:hover{
+    color: var(--clr-primary-5);
+
+}
+
+.footer p{
+    font-size: 1.25rem;
+}
+
+
+
+
